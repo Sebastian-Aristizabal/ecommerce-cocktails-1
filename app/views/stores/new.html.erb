@@ -1,0 +1,23 @@
+<div class="d-flex align-items-center justify-content-center">
+  <div class="text-center">
+    <h1>New Store</h1>
+    <%= simple_form_for @store do |f| %>
+      <div class="form-group">
+        <%= f.input :name, placeholder: 'Enter name', class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :address, placeholder: 'Enter address', class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :time_open, placeholder: 'Enter open time', class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :time_close, placeholder: 'Enter close time', class: "form-control" %>
+      </div>
+      <%= f.submit "Create", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to image_tag("https://images.unsplash.com/photo-1579026111824-6f6e4daf2ffd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80", width: "500", height: "500", class: "img-fluid") %>
+  </div>
+</div>

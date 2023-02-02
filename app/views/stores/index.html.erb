@@ -1,0 +1,25 @@
+<div class="container my-5">
+  <h1 class="text-center">All your stores</h1>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <% @stores.each do |store|%>
+            <p class="card-text">
+              <strong>Nombre:</strong> <%= store.name %>
+            </p>
+            <p class="card-text">
+              <strong>Dirección:</strong> <%= store.address %>
+            </p>
+            <p class="card-text">
+              <strong>Fecha de nacimiento:</strong> <%= store.time_open %>
+            </p>
+            <p class="card-text">
+              <strong>Fecha de nacimiento:</strong> <%= store.time_close %>
+            </p
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
