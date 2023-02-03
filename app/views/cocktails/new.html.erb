@@ -26,9 +26,10 @@
       <div class="form-group">
         <%= f.input :store_id, placeholder: 'Enter store id', class: "form-control" %>
       </div>
-      <%# <div class="form-group"> %>
-        <%#= f.collection_select :category_id, Category.order(:name), :id, :name  %>
-      <%# </div> %>
+      <div class="form-group">
+      <%= f.label "Select what kind of cocktail it is:"%> <br>
+        <%= f.collection_select :category_id, Category.order(:name), :id, :name  %>
+      </div>
       <%= f.submit "Create", class: "btn btn-primary" %>
     <% end %>
   </div>
