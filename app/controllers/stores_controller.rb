@@ -17,10 +17,10 @@ class StoresController < ApplicationController
     end
   end
 
-  def show
-    @stores = Store.where(user: current_user)
-    @cocktails = Cocktail.where(store: @store)
-  end
+  # def show
+  #   @stores = Store.where(user: current_user)
+  #   @cocktails = Cocktail.where(store: @store)
+  # end
 
   def store_params
     params.require(:store).permit(:name, :address, :time_open, :time_close)

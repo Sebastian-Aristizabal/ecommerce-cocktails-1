@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  belongs_to :cocktail
+  has_many :cocktails
 end

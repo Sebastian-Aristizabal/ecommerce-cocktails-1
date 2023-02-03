@@ -1,0 +1,14 @@
+<h1>Every Cocktail</h1>
+<% @cocktails.each do |cocktail| %>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= cocktail.name %></h5>
+      <p class="card-text"><%= cocktail.description %></p>
+      <p class="card-text"><%= cocktail.ingredients %></p>
+      <p class="card-text"><%= cocktail.store_id %></p>
+
+      <%#= link_to "Edit", edit_cocktail_path(cocktail), class: "btn btn-primary" %>
+      <%#= link_to "Delete", cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+    </div>
+  </div>
+<% end %>
