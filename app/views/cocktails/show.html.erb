@@ -1,0 +1,24 @@
+<div class="cocktail-info">
+  <h1><%= @cocktail.name %></h1>
+          <% if user_signed_in? %>
+            <% if current_user.id == @cocktail.store.user_id %>
+              <%= link_to @cocktail,  method: :delete, data: { turbo_method: :delete} do %>
+                <i class="fa-regular fa-trash pe-3"></i>
+              <% end %>
+              <%# revisar que este edit_cocktail_path(:id) con :id no esta funcionando adecuadamente,  %>
+              <%= link_to  edit_cocktail_path(params[:id]) do %>
+                <i class="fa-solid fa-pen-to-square color-icon.header"></i>
+              <% end %>
+            <% end %>
+          <% end %>
+  <p>Volume: <%= @cocktail.ml %> ml</p>
+  <p>Price: $<%= @cocktail.price %></p>
+  <p>Status: <%= @cocktail.status ? 'In stock' : 'Sold out' %></p>
+  <p>Discount: <%= @cocktail.discount %>%</p>
+  <p>Category: <%= @cocktail.category.name %></p>
+  <p>Store: <%= @cocktail.store.name %></p>
+  <h2>Ingredients:</h2>
+  <p><%= @cocktail.ingredients %></p>
+  <h2>Description:</h2>
+  <p><%= @cocktail.description %></p>
+</div>

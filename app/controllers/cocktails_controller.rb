@@ -20,6 +20,10 @@ class CocktailsController < ApplicationController
     #   @cocktails = Cocktail.all
     # end
     @cocktails = Cocktail.all
+
+    #a way to find cocktails by current user
+    # user = User.find(current_user.id)
+    # @cocktails_c_user = user.stores.map(&:cocktails).flatten
   end
 
   def new
@@ -27,7 +31,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
-
+    # whatch find_cocktail method
   end
 
   def create
@@ -43,10 +47,14 @@ class CocktailsController < ApplicationController
   def edit
   end
 
-  # def update
-  #   @cocktail.update(cocktail_params)
-  #   redirect_to cocktail_path(@cocktail)
-  # end
+  def update
+    @cocktail.update(cocktail_params)
+    if @cocktail.update(cocktail_params)
+      redirect_to @cocktail, notice: 'Cocktail was successfully updated.'
+    else
+      render :edit
+    end
+  end
 
   def destroy
     @cocktail.destroy
