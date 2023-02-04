@@ -1,2 +1,20 @@
 <h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<% @cocktails.each do |cocktail| %>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= cocktail.name %></h5>
+      <p class="card-text"><%= cocktail.description %></p>
+      <p class="card-text"><%= cocktail.price %></p>
+
+      <%if cocktail.discount > 0%>
+        <p class="card-text"><%= cocktail.price - (cocktail.price * cocktail.discount / 100) %></p>
+      <% end %>
+      
+      <p class="card-text"><%= cocktail.status ? 'In stock' : 'Sold out' %></p>
+      <p class="card-text"><%= cocktail.discount %>%</p>
+      <p class="card-text"><%= cocktail.store_id %></p>
+      <p><%= link_to "Details",  cocktail_path(cocktail.id), class: "btn btn-primary" %></p>
+    </div>
+  </div>
+<% end %>
