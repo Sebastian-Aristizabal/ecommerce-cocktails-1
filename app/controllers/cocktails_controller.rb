@@ -3,27 +3,9 @@ class CocktailsController < ApplicationController
   before_action :find_cocktail, only: %i[destroy show edit update]
 
   def index
-    # if params[:category_id]
-    #   @category = Category.find(params[:category_id])
-    #   if @category.name == "aperitivos"
-    #     @cocktails = Cocktail.where(category_id: @category.id)
-    #   elsif @category.name == "refrescantes"
-    #     @cocktails = Cocktail.where(category_id: @category.id)
-    #   elsif @category.name == "digestivos"
-    #     @cocktails = Cocktail.where(category_id: @category.id)
-    #   end
-    # elsif params[:user_id]
-    #   @cocktails = Cocktail.where(user_id: params[:user_id])
-    # elsif params[:query]
-    #   @cocktails = Cocktail.search(params[:query])
-    # else
-    #   @cocktails = Cocktail.all
-    # end
-    @cocktails = Cocktail.all
-
-    #a way to find cocktails by current user
-    # user = User.find(current_user.id)
-    # @cocktails_c_user = user.stores.map(&:cocktails).flatten
+    # a way to find cocktails by current user
+    user = User.find(current_user.id)
+    @cocktails = user.stores.map(&:cocktails).flatten
   end
 
   def new
@@ -31,7 +13,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
-    # whatch find_cocktail method
+    
   end
 
   def create

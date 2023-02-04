@@ -6,21 +6,19 @@
       <p class="card-text"><%= cocktail.description %></p>
       <p class="card-text"><%= cocktail.ingredients %></p>
       <p class="card-text"><%= cocktail.store_id %></p>
-
+      <p><%= link_to "Details",  cocktail_path(cocktail.id), class: "btn btn-primary" %></p>
 
           <% if user_signed_in? %>
             <% if current_user.id == cocktail.store.user_id %>
               <%= link_to @cocktail,  method: :delete, data: { turbo_method: :delete} do %>
                 <i class="fa-regular fa-trash pe-3"></i>
               <% end %>
-              <%# revisar que este edit_cocktail_path(:id) con :id no esta funcionando adecuadamente,  %>
-              <%= link_to edit_cocktail_path(:id) do %>
+
+              <%= link_to edit_cocktail_path(cocktail.id) do %>
                 <i class="fa-solid fa-pen-to-square color-icon.header"></i>
               <% end %>
             <% end %>
           <% end %>
-      <%#= link_to "Edit", edit_cocktail_path(cocktail), class: "btn btn-primary" %>
-      <%#= link_to "Delete", cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
     </div>
   </div>
 <% end %>
