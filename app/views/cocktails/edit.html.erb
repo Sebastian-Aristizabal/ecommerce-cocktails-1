@@ -1,0 +1,39 @@
+<div class="d-flex align-items-center justify-content-center">
+  <div class="text-center">
+    <h1>Edit cocktail product</h1>
+    <%= simple_form_for @cocktail do |f| %>
+      <div class="form-group">
+        <%= f.input :name, placeholder: 'Enter name', class: "form-control" %>
+      <div class="form-group">
+        <%= f.input :ml, placeholder: 'Enter ml', class: "form-control" %>
+      </div>
+      </div>
+      <div class="form-group">
+        <%= f.input :ingredients, placeholder: 'Enter ingredients', class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :description, placeholder: 'Enter description', class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :price, placeholder: 'Enter price', class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :status, placeholder: 'Enter status', class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.input :discount, placeholder: 'Enter discount', class: "form-control" %>
+      </div>
+      <div class="form-group">
+      <%= f.label "Select what kind of cocktail it is:"%> <br>
+        <%= f.collection_select :category_id, Category.order(:name), :id, :name  %>
+      </div>
+      <div class="form-group">
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      </div>
+      <%= f.submit "submit", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to image_tag("https://images.unsplash.com/photo-1607622750671-6cd9a99eabd1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80", class: "img-fluid") %>
+  </div>
+</div>

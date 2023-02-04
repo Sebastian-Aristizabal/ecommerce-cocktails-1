@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: "pages#home"
-  resources :stores, shallow: true
+  devise_for :users
+  resources :stores, shallow: true do
+    resources :cocktails, except: [:index]
+  end
+  resources :cocktails, only: [:index]
+  get 'profile', to: 'profiles#show'
+
 end
