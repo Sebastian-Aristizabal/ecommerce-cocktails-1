@@ -40,18 +40,18 @@ class CocktailsController < ApplicationController
     end
   end
 
-  # def edit
-  # end
+  def edit
+  end
 
   # def update
   #   @cocktail.update(cocktail_params)
   #   redirect_to cocktail_path(@cocktail)
   # end
 
-  # def destroy
-  #   @cocktail.destroy
-  #   redirect_to cocktails_path, status: :see_other
-  # end
+  def destroy
+    @cocktail.destroy
+    redirect_to cocktails_path, status: :see_other
+  end
 
   private
 
@@ -60,6 +60,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :address, :time_open, :time_close, :description, :category_id, :photo)
+    params.require(:cocktail).permit(:name, :ml, :ingredients, :description, :price, :status, :discount, :photo, :category_id, :store_id)
   end
 end
