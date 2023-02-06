@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktails-House</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../img/logo6.png" />
+    <link rel="stylesheet" href="../stylesheets/application.css">
+</head>
+<body>
+    <header class="container-head navbar-expand-lg">
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="brand">
+                    <a class="navbar-brand" href="#">
+                        <img src="../img/logo6.png" alt="" class="logo">
+                    </a>
+                </div>
+
+
+                <div class="search-section">
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn" type="submit">Search</button>
+                    </form>
+                  </div>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#"><img src="../img/shoppingcart.png" alt="" class="shopping-cart"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="../img/user.png" alt="" class="login"></a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+        </nav>
+        <div class="menu">
+            <ul class="nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Menu-Drinks
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                </li>
+
+            </ul>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../img/smoothie1.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../img/smoothie2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="../img/smoothie3.png" class="d-block w-100"  alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+
+    <div class="section-container">
+
+        <div class="section-our-cocktails">
+            <h2 class="ourcocktails">Our Coctails</h2>
+            <div class="new-cocktails">
+                <img src="../img/pic44.jpg" alt="" class="cocktails">
+                <img src="../img/cocktail1.jpg" alt="" class="cocktails">
+                <img src="../img/cocktail2.jpg" alt="" class="cocktails">
+            </div>
+
+        </div>
+
+        <div class="section-best-sellers">
+            <h2 class="best-sellers">Best Sellers</h2>
+            <div class="best-sellers-cocktails">
+                <div class="card">
+                    <img src="../img/pic1.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <!-- <div class="rating">
+                            <img src="../img/star.png" alt="" class="star">
+                        </div> -->
+                        <h3 class="subtitle">Cocktail</h3>
+
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores!.</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/pic2.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores!.</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img src="../img/pic3.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores!.</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/pic4.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores! .</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/pic5.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores! .</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/pic6.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores!.</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/pic7.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores! .</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/pic8.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores! .</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img src="../img/pic9.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores!.</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img src="../img/pic10.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores!.</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img src="../img/pic11.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores!.</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img src="../img/pic12.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores! .</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img src="../img/pic13.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores!.</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img src="../img/pic14.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores!.</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img src="../img/pic15.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores! .</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img src="../img/pic16.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores!.</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img src="../img/pic17.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores! .</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+
+
+                </div>
+                <div class="card">
+                    <img src="../img/pic18.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores! .</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/pic20.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores!.</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../img/pic22.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores! .</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img src="../img/pic23.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores! .</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/pic24.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores! .</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/pic25.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores! .</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../img/pic26.jpg" alt="" class="best-cocktails">
+                    <div class="card-info">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                             nulla, cupiditate asperiores! .</p>
+                             <p class="price">$1000</p>
+                             <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-background">
+            <!-- <img src="../img/background.jpg" alt="" class="background"> -->
+            <div class="saying">
+                <h2 class="subtitle">“I only drink a little, but when I do, I turn into another person, and that person drinks a lot.”
+
+
+                </h2>
+            </div>
+        </div>
+
+        <div class="section-discount">
+
+            <h2 class="discount-subtitle">Discount</h2>
+            <div class="discount-cocktails">
+
+
+                <div class="card-discount">
+                    <img src="../img/pic27.jpg" alt="" class="discount-cocktails">
+                    <div class="get-off">
+                        <p>25% off</p>
+
+                    </div>
+
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <div class="itemp">
+                                <p class="price">$1000 </p>......................................
+                                <p class="new-price">$750</p>
+                            </div>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic28.jpg" alt="" class="discount-cocktails">
+                    <div class="sold-out">
+                        <p>Sold-out</p>
+
+                    </div>
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <p class="price">$1000</p>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic29.jpg" alt="" class="discount-cocktails">
+                    <div class="sold-out">
+                        <p>Sold-out</p>
+
+                    </div>
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <p class="price">$1000</p>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic30.jpg" alt="" class="discount-cocktails">
+                    <div class="sold-out">
+                        <p>Sold-out</p>
+
+                    </div>
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <p class="price">$1000</p>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic31.jpg" alt="" class="discount-cocktails">
+                    <div class="get-off">
+                        <p>25% off</p>
+
+                    </div>
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <div class="itemp">
+                                <p class="price">$1000 </p>......................................
+                                <p class="new-price">$750</p>
+                            </div>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic41.jpg" alt="" class="discount-cocktails">
+                    <div class="sold-out">
+                        <p>Sold-out</p>
+
+                    </div>
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <p class="price">$1000</p>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic33.jpg" alt="" class="discount-cocktails">
+                    <div class="sold-out">
+                        <p>Sold-out</p>
+
+                    </div>
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <p class="price">$1000</p>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic34.jpg" alt="" class="discount-cocktails">
+                    <div class="get-off">
+                        <p>25% off</p>
+
+                    </div>
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <div class="itemp">
+                                <p class="price">$1000 </p>......................................
+                                <p class="new-price">$750</p>
+                            </div>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic35.jpg" alt="" class="discount-cocktails">
+                    <div class="sold-out">
+                        <p>Sold-out</p>
+
+                    </div>
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <p class="price">$1000</p>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic36.jpg" alt="" class="discount-cocktails">
+                    <div class="sold-out">
+                        <p>Sold-out</p>
+
+                    </div>
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <p class="price">$1000</p>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic37.jpg" alt="" class="discount-cocktails">
+                    <div class="get-off">
+                        <p>25% off</p>
+
+                    </div>
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <div class="itemp">
+                                <p class="price">$1000 </p>......................................
+                                <p class="new-price">$750</p>
+                            </div>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic38.jpg" alt="" class="discount-cocktails">
+                    <div class="sold-out">
+                        <p>Sold-out</p>
+
+                    </div>
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <p class="price">$1000</p>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic39.jpg" alt="" class="discount-cocktails">
+                    <div class="get-off">
+                        <p>25% off</p>
+
+                    </div>
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <div class="itemp">
+                                <p class="price">$1000 </p>......................................
+                                <p class="new-price">$750</p>
+                            </div>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic40.jpg" alt="" class="discount-cocktails">
+                    <div class="get-off">
+                        <p>25% off</p>
+
+                    </div>
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <div class="itemp">
+                                <p class="price">$1000 </p>......................................
+                                <p class="new-price">$750</p>
+                            </div>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic42.jpg" alt="" class="discount-cocktails">
+                    <div class="get-off">
+                        <p>25% off</p>
+
+                    </div>
+                    <div class="card-info-discount">
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <div class="itemp">
+                                <p class="price">$1000 </p>......................................
+                                <p class="new-price">$750</p>
+                            </div>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+                <div class="card-discount">
+                    <img src="../img/pic43.jpg" alt="" class="discount-cocktails">
+                    <div class="get-off">
+                        <p>25% off</p>
+
+                    </div>
+                    <div class="card-info-discount">
+
+                        <h3 class="subtitle">Cocktail</h3>
+                        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eos fugiat consectetur nihil fugit repellat alias quod incidunt ullam aliquid
+                            nulla, cupiditate asperiores! .</p>
+                            <div class="itemp">
+                                <p class="price">$1000 </p>......................................
+                                <p class="new-price">$750</p>
+                            </div>
+                            <a href="../filter.html" class="buy-btn">Add cart</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="sponsor">
+            <marquee behavior="" direction="">
+                <div class="sponsor-carousel">
+                    <img src="../img/sponsor2.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor3.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor4.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor5.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor6.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor7.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor8.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor9.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor10.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor11.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor12.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor13.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor14.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor15.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor16.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor17.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor18.png" alt="" class="sponsors-item">
+                    <img src="../img/sponsor19.png" alt="" class="sponsors-item">
+                </div>
+            </marquee>
+        </div>
+
+    </div>
+
+    <footer class="footer-container">
+        <div class="column-footer">
+            <div class="navbar">
+                <a href="#" class="nav-item">
+                    <li>Menu-Drinks</li>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <li>Shop</li>
+                </a>
+                <a href="#" class="nav-item">
+                    <li>Contact us</li>
+                </a>
+            </div>
+
+            <div class="social-media">
+
+                <a href="https://www.facebook.com/" class="social-item" target="_blank">
+                    <img src="../img/facebook.png" alt="" class="item">
+
+                </a>
+                <a href="https://www.twitter.com/" class="social-item" target="_blank">
+                    <img src="../img/twitter.png" alt="" class="item">
+
+                </a>
+                <a href="https://www.instagram.com/" class="social-item" target="_blank">
+                    <img src="../img/instagram.png" alt="" class="item">
+
+                </a>
+                <a href="https://www.youtube.com/" class="social-item" target="_blank">
+                    <img src="../img/youtube.png" alt="" class="item">
+
+                </a>
+            </div>
+            <div class="payments">
+                <img src="../img/payment1.png" alt="" class="item">
+                <img src="../img/payment2.png" alt="" class="item">
+                <img src="../img/payment3.png" alt="" class="item">
+                <img src="../img/payment4.png" alt="" class="item">
+                <img src="../img/payment5.png" alt="" class="item">
+                <img src="../img/payment6.png" alt="" class="item">
+                <img src="../img/payment7.png" alt="" class="item">
+                <img src="../img/payment8.png" alt="" class="item">
+            </div>
+        </div>
+        <div class="info-developer">
+            <p class="developer">Developer by Sebastian Aristizabal with ❤</p>
+            <p class="developer">Medellin | Colombia | 2023</p>
+
+        </div>
+    </footer>
+
+
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

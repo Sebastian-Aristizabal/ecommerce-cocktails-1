@@ -10,3 +10,20 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width:100%;
+  height: auto;
+  background-color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+}
+.section-container{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}

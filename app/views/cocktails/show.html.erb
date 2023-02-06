@@ -15,6 +15,7 @@
   <p>Price: $<%= @cocktail.price %></p>
   <p>Status: <%= @cocktail.status ? 'In stock' : 'Sold out' %></p>
   <p>Discount: <%= @cocktail.discount %>%</p>
+  <p>Discounted Price: $<%= (@cocktail.price * (1 - @cocktail.discount/100)).round(2) %></p>
   <p>Category: <%= @cocktail.category.name %></p>
   <p>Store: <%= @cocktail.store.name %></p>
   <h2>Ingredients:</h2>

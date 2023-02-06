@@ -1,20 +1,173 @@
-<h1>Pages#home</h1>
+<div class="hero-section">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <%= image_tag "smoothie1", alt:"", class:"d-block w-100" %>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag "smoothie2", alt:"", class:"d-block w-100" %>
+          </div>
+          <div class="carousel-item">
+            <%= image_tag "smoothie3", alt:"", class:"d-block w-100" %>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
 
-<% @cocktails.each do |cocktail| %>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title"><%= cocktail.name %></h5>
-      <p class="card-text"><%= cocktail.description %></p>
-      <p class="card-text"><%= cocktail.price %></p>
+<div class="section-container">
+    <div class="section-discount">
 
-      <%if cocktail.discount > 0%>
-        <p class="card-text"><%= cocktail.price - (cocktail.price * cocktail.discount / 100) %></p>
-      <% end %>
-      
-      <p class="card-text"><%= cocktail.status ? 'In stock' : 'Sold out' %></p>
-      <p class="card-text"><%= cocktail.discount %>%</p>
-      <p class="card-text"><%= cocktail.store_id %></p>
-      <p><%= link_to "Details",  cocktail_path(cocktail.id), class: "btn btn-primary" %></p>
+        <h2 class="discount-subtitle">Discounts</h2>
+        <div class="discount-cocktails">
+
+          <% @discounted_cocktails.each do |cocktail| %>
+            <div class="card-discount">
+              <%= link_to cocktail_path(cocktail) do %>
+                  <%=image_tag "pic6.jpg", alt:"", class:"discount-cocktails" %>
+
+                <% if !cocktail.status %>
+                  <div class="sold-out">
+                      <p>Sold-out</p>
+                  </div>
+                <%elsif cocktail.discount > 0 %>
+                  <div class="get-off">
+                      <p><%= cocktail.discount.to_i %>% off</p>
+                  </div>
+                <% else %>
+                <% end %>
+
+                  <div class="card-info-discount">
+                      <h3 class="subtitle"><%= cocktail.name %></h3>
+                      <p class="paragraph"><%= cocktail.description %></p>
+                          <div class="itemp">
+                            <% if !cocktail.status %>
+                              <p class="price">$<%= cocktail.price %>
+                            <%elsif cocktail.discount > 0 %>
+                              <p class="price">$<%= cocktail.price %></p>......................................
+                              <p class="new-price">$<%= (cocktail.price * (1 - cocktail.discount/100)).round(2) %></p>
+                            <% else %>
+                              <p class="price">$<%= cocktail.price %>
+                            <% end %>
+                          </div>
+              <% end %>
+                        <%= link_to "Add cart", root_path, class: "buy-btn" %>
+                </div>
+            </div>
+          <% end %>
+        </div>
+    </div>
+
+    <div class="section-background">
+        <%#= image_tag "background.jpg", alt:"", class:"background" %>
+        <!-- <img src="../img/background.jpg" alt="" class="background"> -->
+        <div class="saying">
+            <h2 class="subtitle">“No amount of physical contact could match the healing powers of a well made cocktail.” — David Sedaris</h2>
+        </div>
+    </div>
+
+    <div class="section-discount">
+
+        <h2 class="discount-subtitle">Discounts</h2>
+        <div class="discount-cocktails">
+
+          <% @cocktails.each do |cocktail| %>
+            <div class="card-discount">
+              <%= link_to cocktail_path(cocktail) do %>
+                  <%=image_tag "pic6.jpg", alt:"", class:"discount-cocktails" %>
+
+                <% if !cocktail.status %>
+                  <div class="sold-out">
+                      <p>Sold-out</p>
+                  </div>
+                <%elsif cocktail.discount > 0 %>
+                  <div class="get-off">
+                      <p><%= cocktail.discount.to_i %>% off</p>
+                  </div>
+                <% else %>
+                <% end %>
+
+                  <div class="card-info-discount">
+                      <h3 class="subtitle"><%= cocktail.name %></h3>
+                      <p class="paragraph"><%= cocktail.description %></p>
+                          <div class="itemp">
+                            <% if !cocktail.status %>
+                              <p class="price">$<%= cocktail.price %>
+                            <%elsif cocktail.discount > 0 %>
+                              <p class="price">$<%= cocktail.price %></p>......................................
+                              <p class="new-price">$<%= (cocktail.price * (1 - cocktail.discount/100)).round(2) %></p>
+                            <% else %>
+                              <p class="price">$<%= cocktail.price %>
+                            <% end %>
+                          </div>
+              <% end %>
+                        <%= link_to "Add cart", root_path, class: "buy-btn" %>
+                </div>
+            </div>
+          <% end %>
+        </div>
+    </div>
+
+
+    <div class="sponsor">
+        <marquee behavior="" direction="">
+            <div class="sponsor-carousel">
+              <% sponsors = %w(sponsor2 sponsor3 sponsor4 sponsor5 sponsor6 sponsor7 sponsor8 sponsor9 sponsor10 sponsor11 sponsor12 sponsor13 sponsor14 sponsor15 sponsor16 sponsor17 sponsor18 sponsor19) %>
+              <% sponsors.each do |sponsor| %>
+                <%= image_tag sponsor, class: "discount-cocktails" %>
+              <% end %>
+            </div>
+        </marquee>
+    </div>
+
+</div>
+
+<footer class="footer-container">
+  <div class="column-footer">
+    <div class="navbar">
+      <a href="#" class="nav-item">
+        <li>Menu-Drinks</li>
+      </a>
+      <a href="#" class="nav-item">
+        <li>Shop</li>
+      </a>
+      <a href="#" class="nav-item">
+        <li>Contact us</li>
+      </a>
+    </div>
+
+    <div class="social-media">
+      <%= link_to image_tag("facebook", alt: "", class: "discount-cocktails"), "https://www.facebook.com/", class: "social-item", target: "_blank" %>
+      <%= link_to image_tag("twitter", alt: "", class: "discount-cocktails"), "https://www.twitter.com/", class: "social-item", target: "_blank" %>
+      <%= link_to image_tag("instagram", alt: "", class: "discount-cocktails"), "https://www.instagram.com/", class: "social-item", target: "_blank" %>
+      <%= link_to image_tag("youtube", alt: "", class: "discount-cocktails"), "https://www.youtube.com/", class: "social-item", target: "_blank" %>
+    </div>
+
+    <div class="payments">
+      <%= image_tag "payment1", alt: "", class: "item" %>
+      <%= image_tag "payment2", alt: "", class: "item" %>
+      <%= image_tag "payment3", alt: "", class: "item" %>
+      <%= image_tag "payment4", alt: "", class: "item" %>
+      <%= image_tag "payment5", alt: "", class: "item" %>
+      <%= image_tag "payment6", alt: "", class: "item" %>
+      <%= image_tag "payment7", alt: "", class: "item" %>
+      <%= image_tag "payment8", alt: "", class: "item" %>
     </div>
   </div>
-<% end %>
+  <div class="info-developer">
+    <p class="developer">Developed by Sebastian Aristizabal with ❤</p>
+    <p class="developer">Medellin | Colombia | 2023</p>
+  </div>
+</footer>

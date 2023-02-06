@@ -3,5 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @cocktails = Cocktail.all
+    @discounted_cocktails = Cocktail.where("discount > 0 AND status = ?", true)
   end
 end
