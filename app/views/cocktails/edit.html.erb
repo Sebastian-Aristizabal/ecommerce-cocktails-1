@@ -28,7 +28,7 @@
         <%= f.collection_select :category_id, Category.order(:name), :id, :name  %>
       </div>
       <div class="form-group">
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.input :photo, as: :file %>
       </div>
       <%= f.submit "submit", class: "btn btn-primary" %>
     <% end %>

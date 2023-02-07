@@ -12,11 +12,14 @@
               <strong>Dirección:</strong> <%= store.address %>
             </p>
             <p class="card-text">
-              <strong>Fecha de nacimiento:</strong> <%= store.time_open %>
+              <strong>Opening time:</strong> <%= store.time_open %>
             </p>
             <p class="card-text">
-              <strong>Fecha de nacimiento:</strong> <%= store.time_close %>
+              <strong>Closing time:</strong> <%= store.time_close %>
             </p
+            <p>
+            <%= link_to "New product", new_store_cocktail_path(store.id), class: "btn btn-primary" %>
+            </p>
           <% end %>
         </div>
       </div>
