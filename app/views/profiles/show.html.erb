@@ -13,7 +13,9 @@
           <p class="card-text">
             <strong>Fecha de nacimiento:</strong> <%= @user.birth_date %>
           </p>
-          <%= link_to "Submit", new_store_path, class: "btn btn-primary" %>
+          <%= link_to "Your Stores", stores_path, class: "btn btn-primary" %>
+          <%= link_to "New Store", new_store_path, class: "btn btn-primary" %>
+          <%= link_to "Your products", cocktails_path, class: "btn btn-primary" %>
         </div>
       </div>
     </div>

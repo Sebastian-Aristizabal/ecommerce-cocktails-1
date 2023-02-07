@@ -5,17 +5,6 @@
 
     <div class="cocktail-info">
         <h1><%= @cocktail.name %></h1>
-                <% if user_signed_in? %>
-                  <% if current_user.id == @cocktail.store.user_id %>
-                    <%= link_to @cocktail,  method: :delete, data: { turbo_method: :delete} do %>
-                      <i class="fa-regular fa-trash pe-3"></i>
-                    <% end %>
-                    <%# revisar que este edit_cocktail_path(:id) con :id no esta funcionando adecuadamente,  %>
-                    <%= link_to  edit_cocktail_path(params[:id]) do %>
-                      <i class="fa-solid fa-pen-to-square color-icon.header"></i>
-                    <% end %>
-                  <% end %>
-                <% end %>
       <div class="cocktail-info1">
         <h3>Store: <span><%= @cocktail.store.name %></span></h3>
         <h3>Volume: <span><%= @cocktail.ml %> ml</span></h3>

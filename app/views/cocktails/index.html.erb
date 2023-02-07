@@ -5,13 +5,13 @@
       <h5 class="card-title"><%= cocktail.name %></h5>
       <p class="card-text"><%= cocktail.description %></p>
       <p class="card-text"><%= cocktail.ingredients %></p>
-      <p class="card-text"><%= cocktail.store_id %></p>
+      <p class="card-text">Store: <%= cocktail.store.name %></p>
       <p><%= link_to "Details",  cocktail_path(cocktail.id), class: "btn btn-primary" %></p>
 
           <% if user_signed_in? %>
             <% if current_user.id == cocktail.store.user_id %>
-              <%= link_to @cocktail,  method: :delete, data: { turbo_method: :delete} do %>
-                <i class="fa-regular fa-trash pe-3"></i>
+              <%= link_to cocktail,  method: :delete, data: { turbo_method: :delete} do %>
+                <i class="fa-regular fa-trash-can"></i>
               <% end %>
 
               <%= link_to edit_cocktail_path(cocktail.id) do %>

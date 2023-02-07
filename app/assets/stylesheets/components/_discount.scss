@@ -112,3 +112,27 @@
     color: var(--white);
     border: 1px solid var(--background-color-btn-hover);
 }
+
+@media (max-width: 1440px) {
+  .section-discount .discount-cocktails {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-discount .discount-cocktails {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .section-discount .discount-cocktails {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 479px) {
+  .section-discount .discount-cocktails {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
