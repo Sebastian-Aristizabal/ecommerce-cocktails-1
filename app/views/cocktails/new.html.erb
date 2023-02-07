@@ -1,7 +1,7 @@
 <div class="d-flex align-items-center justify-content-center">
   <div class="text-center">
     <h1>New cocktail product</h1>
-    <%= simple_form_for @cocktail do |f| %>
+    <%=  simple_form_for @cocktail, url: store_cocktails_path(store_id: @store), method: :post do |f| %>
       <div class="form-group">
         <%= f.input :name, placeholder: 'Enter name', class: "form-control" %>
       <div class="form-group">
@@ -24,13 +24,13 @@
         <%= f.input :discount, placeholder: 'Enter discount', class: "form-control" %>
       </div>
       <div class="form-group">
-      <%= f.label "Select what kind of cocktail it is:"%> <br>
+        <%= f.label "Select what kind of cocktail it is:"%> <br>
         <%= f.collection_select :category_id, Category.order(:name), :id, :name  %>
       </div>
       <div class="form-group">
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.input :photo, as: :file %>
       </div>
-      <%= f.submit "submit", class: "btn btn-primary" %>
+        <%= f.submit "submit", class: "btn btn-primary" %>
     <% end %>
   </div>
   <div>

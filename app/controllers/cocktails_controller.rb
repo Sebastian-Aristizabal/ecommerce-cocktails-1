@@ -10,15 +10,18 @@ class CocktailsController < ApplicationController
 
   def new
     @cocktail = Cocktail.new
+    @store = Store.find(params[:store_id])
+    @cocktail.store_id = @store.id
   end
 
   def show
-    
+
   end
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
-    @cocktail.user_id = current_user.id
+    @store = Store.find(params[:store_id])
+    @cocktail.store_id = @store.id
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
