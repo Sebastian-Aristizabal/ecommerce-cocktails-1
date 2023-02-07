@@ -1,25 +1,39 @@
-<div class="cocktail-info">
-  <h1><%= @cocktail.name %></h1>
-          <% if user_signed_in? %>
-            <% if current_user.id == @cocktail.store.user_id %>
-              <%= link_to @cocktail,  method: :delete, data: { turbo_method: :delete} do %>
-                <i class="fa-regular fa-trash pe-3"></i>
-              <% end %>
-              <%# revisar que este edit_cocktail_path(:id) con :id no esta funcionando adecuadamente,  %>
-              <%= link_to  edit_cocktail_path(params[:id]) do %>
-                <i class="fa-solid fa-pen-to-square color-icon.header"></i>
-              <% end %>
-            <% end %>
-          <% end %>
-  <p>Volume: <%= @cocktail.ml %> ml</p>
-  <p>Price: $<%= @cocktail.price %></p>
-  <p>Status: <%= @cocktail.status ? 'In stock' : 'Sold out' %></p>
-  <p>Discount: <%= @cocktail.discount %>%</p>
-  <p>Discounted Price: $<%= (@cocktail.price * (1 - @cocktail.discount/100)).round(2) %></p>
-  <p>Category: <%= @cocktail.category.name %></p>
-  <p>Store: <%= @cocktail.store.name %></p>
-  <h2>Ingredients:</h2>
-  <p><%= @cocktail.ingredients %></p>
-  <h2>Description:</h2>
-  <p><%= @cocktail.description %></p>
+<div class="cocktail-show">
+    <div>
+      <%=image_tag(@cocktail.photo, class:"cocktail-image")%>
+    </div>
+
+    <div class="cocktail-info">
+        <h1><%= @cocktail.name %></h1>
+                <% if user_signed_in? %>
+                  <% if current_user.id == @cocktail.store.user_id %>
+                    <%= link_to @cocktail,  method: :delete, data: { turbo_method: :delete} do %>
+                      <i class="fa-regular fa-trash pe-3"></i>
+                    <% end %>
+                    <%# revisar que este edit_cocktail_path(:id) con :id no esta funcionando adecuadamente,  %>
+                    <%= link_to  edit_cocktail_path(params[:id]) do %>
+                      <i class="fa-solid fa-pen-to-square color-icon.header"></i>
+                    <% end %>
+                  <% end %>
+                <% end %>
+      <div class="cocktail-info1">
+        <h3>Store: <span><%= @cocktail.store.name %></span></h3>
+        <h3>Volume: <span><%= @cocktail.ml %> ml</span></h3>
+        <h3>Status: <span class="status"><%= @cocktail.status ? 'In stock' : 'Sold out' %></span></h3>
+      </div>
+
+        <hr>
+      <div class="cocktail-info2">
+        <h3>Price: $ <span><%= @cocktail.price %></span></h3>
+        <h3>Discount: <span><%= @cocktail.discount %></span>%</h3>
+        <h3>Discounted Price: $<span class="discount"><%= (@cocktail.price * (1 - @cocktail.discount/100)).round(2) %></span></h3>
+      </div>
+        <hr>
+        <h3>Category: <%= @cocktail.category.name %></h3>
+        <br>
+        <h2>Ingredients:</h2>
+        <p><%= @cocktail.ingredients %></p>
+        <h2>Description:</h2>
+        <p><%= @cocktail.description %></p>
+    </div>
 </div>

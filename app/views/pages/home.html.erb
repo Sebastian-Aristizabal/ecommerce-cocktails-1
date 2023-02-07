@@ -36,7 +36,7 @@
           <% @discounted_cocktails.each do |cocktail| %>
             <div class="card-discount">
               <%= link_to cocktail_path(cocktail) do %>
-                  <%=image_tag "pic6.jpg", alt:"", class:"discount-cocktails" %>
+                  <%=image_tag(cocktail.photo, class:"discount-cocktails")%>
 
                 <% if !cocktail.status %>
                   <div class="sold-out">
@@ -86,7 +86,7 @@
           <% @cocktails.each do |cocktail| %>
             <div class="card-discount">
               <%= link_to cocktail_path(cocktail) do %>
-                  <%=image_tag "pic6.jpg", alt:"", class:"discount-cocktails" %>
+                  <%=image_tag(cocktail.photo, class:"discount-cocktails")%>
 
                 <% if !cocktail.status %>
                   <div class="sold-out">
