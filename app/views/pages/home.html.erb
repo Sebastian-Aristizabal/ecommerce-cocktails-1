@@ -80,7 +80,7 @@
 
     <div class="section-discount">
 
-        <h2 class="discount-subtitle">Discounts</h2>
+        <h2 class="discount-subtitle">All Cocktails</h2>
         <div class="discount-cocktails">
 
           <% @cocktails.each do |cocktail| %>
@@ -133,41 +133,3 @@
     </div>
 
 </div>
-
-<footer class="footer-container">
-  <div class="column-footer">
-    <div class="navbar">
-      <a href="#" class="nav-item">
-        <li>Menu-Drinks</li>
-      </a>
-      <a href="#" class="nav-item">
-        <li>Shop</li>
-      </a>
-      <a href="#" class="nav-item">
-        <li>Contact us</li>
-      </a>
-    </div>
-
-    <div class="social-media">
-      <%= link_to image_tag("facebook", alt: "", class: "discount-cocktails"), "https://www.facebook.com/", class: "social-item", target: "_blank" %>
-      <%= link_to image_tag("twitter", alt: "", class: "discount-cocktails"), "https://www.twitter.com/", class: "social-item", target: "_blank" %>
-      <%= link_to image_tag("instagram", alt: "", class: "discount-cocktails"), "https://www.instagram.com/", class: "social-item", target: "_blank" %>
-      <%= link_to image_tag("youtube", alt: "", class: "discount-cocktails"), "https://www.youtube.com/", class: "social-item", target: "_blank" %>
-    </div>
-
-    <div class="payments">
-      <%= image_tag "payment1", alt: "", class: "item" %>
-      <%= image_tag "payment2", alt: "", class: "item" %>
-      <%= image_tag "payment3", alt: "", class: "item" %>
-      <%= image_tag "payment4", alt: "", class: "item" %>
-      <%= image_tag "payment5", alt: "", class: "item" %>
-      <%= image_tag "payment6", alt: "", class: "item" %>
-      <%= image_tag "payment7", alt: "", class: "item" %>
-      <%= image_tag "payment8", alt: "", class: "item" %>
-    </div>
-  </div>
-  <div class="info-developer">
-    <p class="developer">Developed by Sebastian Aristizabal with ❤</p>
-    <p class="developer">Medellin | Colombia | 2023</p>
-  </div>
-</footer>

@@ -65,3 +65,35 @@
 .footer-container .info-developer .developer{
     font-size: 10px;
 }
+li{
+  list-style: none;
+}
+
+.social-media, .payments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-media li, .payments li {
+  margin: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .social-media li, .payments li {
+  flex-basis: 50%;
+  }
+  }
+
+  @media only screen and (max-width: 500px) {
+  .social-media li, .payments li {
+  flex-basis: 100%;
+  }
+  }
+
+  @media only screen and (max-width: 320px) {
+  .social-media li, .payments li {
+  flex-basis: 100%;
+  text-align: center;
+  }
+  }
