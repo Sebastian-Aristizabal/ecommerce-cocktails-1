@@ -99,8 +99,8 @@ cocktail_7.photo.attach(io: photo_7, filename: "pic13.png", content_type: "image
 cocktail_7.save!
 
 cocktail_8 = Cocktail.new(name: "Painkiller", ml: 200, ingredients: "pineapple, orange juices and coconut cream", description: "A 1970s staple, the Painkiller was first mixed up in the British Virgin Islands with Pusser’s Navy Rum. Add pineapple and orange juices, plus a dollop of coconut cream, and you’re instantly transported to the tropics.", price: 10, status: true, discount: 20, category_id: category_2.id, store_id: store_2.id)
-photo_8 = File.open('app/assets/images/pic14.png')
-cocktail_8.photo.attach(io: photo_8, filename: "pic14.png", content_type: "image/png")
+photo_8 = File.open('app/assets/images/pic31.png')
+cocktail_8.photo.attach(io: photo_8, filename: "pic31.png", content_type: "image/png")
 cocktail_8.save!
 
 cocktail_9 = Cocktail.new(name: "Ti’ Punch", ml: 300, ingredients: "rhum agricole, cane sugar syrup and squeeze of lime", description: "Daiquiri lovers, this drink is for you. The national drink of Martinique is made with rhum agricole and cane sugar syrup, plus a squeeze of lime for a simple cocktail worth sipping any season.", price: 10, status: false, discount: 10, category_id: category_3.id, store_id: store_2.id)
@@ -109,8 +109,8 @@ cocktail_9.photo.attach(io: photo_9, filename: "pic15.png", content_type: "image
 cocktail_9.save!
 
 cocktail_10 = Cocktail.new(name: "Hanky-Panky", ml: 100, ingredients: "gin, sweet vermouth, and a few dashes of Fernet-Branca", description: "Bartenders around the world are increasingly showing their love for amari, pushing the category into the mainstream.", price: 10, status: true, discount: 0, category_id: category_1.id, store_id: store_2.id)
-photo_10 = File.open('app/assets/images/pic16.png')
-cocktail_10.photo.attach(io: photo_10, filename: "pic16.png", content_type: "image/png")
+photo_10 = File.open('app/assets/images/pic40.png')
+cocktail_10.photo.attach(io: photo_10, filename: "pic40.png", content_type: "image/png")
 cocktail_10.save!
 
 cocktail_11 = Cocktail.new(name: "Cosmopolitan", ml: 200, ingredients: "vodka, triple sec, cranberry, and lime", description: "The days of the Cosmo as the bartender’s piñata are over. You may even see crafted spins on this drink, but mostly, there’s indifference.", price: 10, status: true, discount: 15, category_id: category_2.id, store_id: store_2.id)
@@ -125,8 +125,8 @@ cocktail_12.save!
 
 # for user_3, store_3
 cocktail_13 = Cocktail.new(name: "Bellini", ml: 100, ingredients: "White Peach Purée, Prosecco", description: "This famous Prosecco-based brunch staple was invented by Giuseppe Cipriani at Harry’s Bar in Venice, Italy. The two-ingredient cocktail simply combines the Italian bubbly with peach puree in a flute glass.", price: 10, status: true, discount: 0, category_id: category_1.id, store_id: store_3.id)
-photo_13 = File.open('app/assets/images/pic25.png')
-cocktail_13.photo.attach(io: photo_13, filename: "pic25.png", content_type: "image/png")
+photo_13 = File.open('app/assets/images/pic27.png')
+cocktail_13.photo.attach(io: photo_13, filename: "pic27.png", content_type: "image/png")
 cocktail_13.save!
 
 cocktail_14 = Cocktail.new(name: "Be´s Knees", ml: 200, ingredients: "gin, squeezed lemon juice, honey syrup, lemon twist", description: "Honey is the star of this simply delicious Prohibition-era cocktail. Its combination of gin, lemon juice, and honey syrup is balanced and quaffable. Plus, it’s easy to make and perfect for batching at parties.", price: 10, status: true, discount: 20, category_id: category_2.id, store_id: store_3.id)
@@ -135,18 +135,18 @@ cocktail_14.photo.attach(io: photo_14, filename: "pic20.png", content_type: "ima
 cocktail_14.save!
 
 cocktail_15 = Cocktail.new(name: "Long Island Iced Tea", ml: 300, ingredients: "light rum, vodka, tequila, and gin", description: "New to the list in 2020, the Long Island Iced Tea jumped from No. 49 to No. 35 this year. The drink combines four spirits: light rum, vodka, tequila, and gin. It’s the ultimate cocktail for indecisive imbibers. Love it or hate it, this saccharine drink is back.", price: 10, status: false, discount: 10, category_id: category_3.id, store_id: store_3.id)
-photo_15 = File.open('app/assets/images/pic26.png')
-cocktail_15.photo.attach(io: photo_15, filename: "pic26.png", content_type: "image/png")
+photo_15 = File.open('app/assets/images/pic36.png')
+cocktail_15.photo.attach(io: photo_15, filename: "pic36.png", content_type: "image/png")
 cocktail_15.save!
 
 cocktail_16 = Cocktail.new(name: "Aviation", ml: 100, ingredients: "crème de violette or crème Yvette, Maraschino liqueur, gin, and lemon juice", description: "After acquainting yourself with Tom Collins, meet an Aviation: Served up in a Martini glass, the gorgeous lavender-colored cocktail is made with crème de violette or crème Yvette, Maraschino liqueur, gin, and lemon juice. The Aviation has had a bumpy flight these past few years, descending 14 spots since 2020.", price: 10, status: true, discount: 0, category_id: category_1.id, store_id: store_3.id)
-photo_16 = File.open('app/assets/images/pic22.png')
-cocktail_16.photo.attach(io: photo_16, filename: "pic22.png", content_type: "image/png")
+photo_16 = File.open('app/assets/images/pic28.png')
+cocktail_16.photo.attach(io: photo_16, filename: "pic28.png", content_type: "image/png")
 cocktail_16.save!
 
 cocktail_17 = Cocktail.new(name: "Vesper", ml: 200, ingredients: "gin, vodka, and Lillet.", description: "When James Bond wasn’t drinking terrible Martinis, he often ordered a Vesper, a drink invented by Bond author Ian Fleming. The cocktail first popped up in Fleming’s “Casino Royale” in 1953.", price: 10, status: true, discount: 15, category_id: category_2.id, store_id: store_3.id)
-photo_17 = File.open('app/assets/images/pic23.png')
-cocktail_17.photo.attach(io: photo_17, filename: "pic23.png", content_type: "image/png")
+photo_17 = File.open('app/assets/images/pic29.png')
+cocktail_17.photo.attach(io: photo_17, filename: "pic29.png", content_type: "image/png")
 cocktail_17.save!
 
 cocktail_18 = Cocktail.new(name: "Old Cuban", ml: 300, ingredients: "aged rum, mint leaves, simple syrup, lime juice", description: "Famed bartender Audrey Saunders created the Old Cuban in 2001 at the now shuttered Pegu Club. A take on the classic Mojito, the drink combines aged rum, mint leaves, simple syrup, lime juice, Angostura bitters, and a Champagne floater. The result is a more celebratory version of the Cuban classic.", price: 10, status: true, discount: 10, category_id: category_3.id, store_id: store_3.id)
