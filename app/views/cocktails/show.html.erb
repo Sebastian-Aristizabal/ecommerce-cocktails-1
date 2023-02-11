@@ -13,9 +13,9 @@
 
         <hr>
       <div class="cocktail-info2">
-        <h3>Price: $ <span><%= @cocktail.price %></span></h3>
+        <h3>Price: <span><%= number_to_currency(@cocktail.price) %></span></h3>
         <h3>Discount: <span><%= @cocktail.discount %></span>%</h3>
-        <h3>Discounted Price: $ <span class="discount"><%= (@cocktail.price * (1 - @cocktail.discount/100)).round(2) %></span></h3>
+        <h3>Discounted Price: <span class="discount"><%= number_to_currency((@cocktail.price * (1 - @cocktail.discount/100)).round(2)) %></span></h3>
       </div>
         <hr>
         <h3>Category: <%= @cocktail.category.name %></h3>
