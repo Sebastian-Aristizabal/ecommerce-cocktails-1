@@ -1,5 +1,11 @@
+<%# <div data-controller="price">
+  <input type="text" data-price-target="price">
+  <button data-action="input->price#formatCurrency">Format Currency</button>
+</div> %>
+<input type="text" id="price" data-controller="priceformat">
+
 <div class="d-flex align-items-center justify-content-center">
-  <div class="text-center">
+  <div class="text-center" data-controller="priceformat">
     <h1>New cocktail product</h1>
     <%=  simple_form_for @cocktail, url: store_cocktails_path(store_id: @store), method: :post do |f| %>
       <div class="form-group">
@@ -15,7 +21,7 @@
         <%= f.input :description, placeholder: 'Enter description', class: "form-control" %>
       </div>
       <div class="form-group">
-        <%= f.input :price, placeholder: 'Enter price', class: "form-control" %>
+        <%= f.input :price, placeholder: 'Enter price', class: "form-control", data: { target: "priceformat.price", action: "input->priceformat#formatCurrency" }%>
       </div>
       <div class="form-group">
         <%= f.input :status, placeholder: 'Enter status', class: "form-control" %>
