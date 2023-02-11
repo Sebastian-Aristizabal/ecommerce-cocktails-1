@@ -54,12 +54,12 @@
                       <p class="paragraph"><%= cocktail.description %></p>
                           <div class="itemp">
                             <% if !cocktail.status %>
-                              <p class="price">$<%= cocktail.price %>
+                              <p class="price"><%= number_to_currency(cocktail.price) %>
                             <%elsif cocktail.discount > 0 %>
-                              <p class="price">$<%= cocktail.price %></p>......................................
-                              <p class="new-price">$<%= (cocktail.price * (1 - cocktail.discount/100)).round(2) %></p>
+                              <p class="price"><%= number_to_currency(cocktail.price) %></p>......................................
+                              <p class="new-price"><%= number_to_currency((cocktail.price * (1 - cocktail.discount/100)).round(2)) %></p>
                             <% else %>
-                              <p class="price">$<%= cocktail.price %>
+                              <p class="price"><%= number_to_currency(cocktail.price) %>
                             <% end %>
                           </div>
               <% end %>
@@ -104,12 +104,12 @@
                       <p class="paragraph"><%= cocktail.description %></p>
                           <div class="itemp">
                             <% if !cocktail.status %>
-                              <p class="price">$<%= cocktail.price %>
+                              <p class="price"><%= number_to_currency(cocktail.price) %>
                             <%elsif cocktail.discount > 0 %>
-                              <p class="price">$<%= cocktail.price %></p>......................................
-                              <p class="new-price">$<%= (cocktail.price * (1 - cocktail.discount/100)).round(2) %></p>
+                              <p class="price"><%= number_to_currency(cocktail.price) %></p>......................................
+                              <p class="new-price"><%= number_to_currency((cocktail.price * (1 - cocktail.discount/100)).round(2)) %></p>
                             <% else %>
-                              <p class="price">$<%= cocktail.price %>
+                              <p class="price"><%= number_to_currency(cocktail.price) %>
                             <% end %>
                           </div>
               <% end %>
