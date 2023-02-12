@@ -27,7 +27,7 @@
     color: var(--gray);
 }
 .container-head .navbar .container .collapse{
-    margin-left: 329px;
+    margin-left: 0px;
 }
 .container-head .navbar .container .collapse .navbar-nav .nav-item .shopping-cart, .login{
     width: 25px;
@@ -50,7 +50,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0 110px;
+    margin: 0px;
 }
 .container-head .menu .nav .nav-item > a.nav-link{
     font-size: var(--content);
@@ -59,7 +59,6 @@
 }
 
 .navbar i{
-
   color: white;
   font-size: 25px;
 }
