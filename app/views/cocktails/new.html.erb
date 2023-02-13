@@ -4,8 +4,8 @@
 </div> %>
 
 <div class="background-image">
-  <h3>New cocktail product</h3>
   <div class="container" data-controller="priceformat">
+  <h3>Present your new artwork from you to the <span>world</span></h3>
       <%=  simple_form_for @cocktail, url: store_cocktails_path(store_id: @store), method: :post do |f| %>
         <div class="div1">
           <div class="form-group">
@@ -15,7 +15,7 @@
             <%= f.input :price, placeholder: 'Enter price', class: "form-control", data: { target: "priceformat.price", action: "input->priceformat#formatCurrency" }, label: false%>
           </div>
           <div class="form-group">
-            <%= f.input :ml, placeholder: 'Enter ml', class: "form-control", label: false %>
+            <%= f.input :discount, placeholder: 'Enter discount percentage', class: "form-control", label: false %>
           </div>
           <div class="form-group">
             <%= f.input :ingredients, placeholder: 'Enter ingredients', class: "form-control", label: false %>
@@ -24,20 +24,23 @@
 
         <div class="div2">
           <div class="form-group">
-            <%= f.input :description, placeholder: 'Enter description', class: "form-control", label: false %>
+            <%= f.input :ml, placeholder: 'Enter size in ml', class: "form-control", label: false %>
           </div>
           <div class="form-group">
-            <%= f.input :discount, class: "form-control", label: false %>
+            <%= f.input :description, placeholder: 'Enter description', class: "form-control", label: false %>
           </div>
           <div class="form-group">
             <%= f.label "Select what kind of cocktail it is:"%> <br>
             <%= f.collection_select :category_id, Category.order(:name), :id, :name  %>
           </div>
+          <br>
           <div class="form-group">
-            <%= f.input :photo, as: :file %>
+            <%= f.input :photo, as: :file, label: 'Attach an image of your product' %>
           </div>
         </div>
-          <%= f.submit "submit", class: "btn btn-primary" %>
+        <div class="div3">
+            <%= f.submit "submit", class: "buy-btn" %>
+        </div>
       <% end %>
   </div>
 </div>
