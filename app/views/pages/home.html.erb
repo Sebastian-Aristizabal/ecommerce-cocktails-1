@@ -40,7 +40,7 @@
 
                 <% if !cocktail.status %>
                   <div class="sold-out">
-                      <p>Sold-out</p>
+                    <p>sold-out</p>
                   </div>
                 <%elsif cocktail.discount > 0 %>
                   <div class="get-off">
@@ -71,8 +71,6 @@
     </div>
 
     <div class="section-background">
-        <%#= image_tag "background.jpg", alt:"", class:"background" %>
-        <!-- <img src="../img/background.jpg" alt="" class="background"> -->
         <div class="saying">
             <h2 class="subtitle">“No amount of physical contact could match the healing powers of a well made cocktail.” — David Sedaris</h2>
         </div>
@@ -90,11 +88,11 @@
 
                 <% if !cocktail.status %>
                   <div class="sold-out">
-                      <p>Sold-out</p>
+                    <p>Sold-out</p>
                   </div>
                 <%elsif cocktail.discount > 0 %>
                   <div class="get-off">
-                      <p><%= cocktail.discount.to_i %>% off</p>
+                    <p><%= cocktail.discount.to_i %>% off</p>
                   </div>
                 <% else %>
                 <% end %>
