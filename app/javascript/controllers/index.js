@@ -4,8 +4,5 @@
 
 import { application } from "./application"
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
-
-import PriceFormatController from "./priceformat_controller"
-application.register("priceformat", PriceFormatController)
+import VerificadorController from "./verificador_controller"
+application.register("verificador", VerificadorController)

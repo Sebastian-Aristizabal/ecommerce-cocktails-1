@@ -1,18 +1,18 @@
-<%# <div data-controller="price">
-  <input type="text" data-price-target="price">
-  <button data-action="input->price#formatCurrency">Format Currency</button>
+<%# <div data-controller="verificador" data-price-target="input">
+  <input type="text" data-action="keyup->verificador#formatNumber">
+  <button data-action="keyup->verificador#formatNumber">Format Currency</button>
 </div> %>
 
 <div class="background-image">
-  <div class="container" data-controller="priceformat">
+  <div class="container" data-controller="verificador">
   <h3>Present your new artwork from you to the <span>world</span></h3>
-      <%=  simple_form_for @cocktail, url: store_cocktails_path(store_id: @store), method: :post do |f| %>
+      <%=  simple_form_for @cocktail, url: store_cocktails_path(store_id: @store), data: { action: "keyup->verificador#formatNumber" }, method: :post do |f| %>
         <div class="div1">
           <div class="form-group">
-            <%= f.input :name, placeholder: 'Enter name', class: "form-control", label: false%>
+            <%= f.input :name, placeholder: 'Enter cocktail name', class: "form-control", label: false%>
           </div>
           <div class="form-group">
-            <%= f.input :price, placeholder: 'Enter price', class: "form-control", data: { target: "priceformat.price", action: "input->priceformat#formatCurrency" }, label: false%>
+            <%= f.input :price, placeholder: 'Enter price', data: { target: "input" }, class: "form-control", label: false %>
           </div>
           <div class="form-group">
             <%= f.input :discount, placeholder: 'Enter discount percentage', class: "form-control", label: false %>
@@ -42,5 +42,7 @@
             <%= f.submit "submit", class: "buy-btn" %>
         </div>
       <% end %>
+        <ul data-target="input">
+        </ul>
   </div>
 </div>
