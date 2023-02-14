@@ -1,5 +1,5 @@
-.background-image {
-  background-image: url('cocktailnew.png');
+.background-image-stores {
+  background-image: url('cocktailnew2.png');
   background-attachment: fixed;
   background-size:100%;
   background-position:cover;
@@ -25,25 +25,24 @@
   span{
     color: #fca311;
   }
+  .div1 {
+    margin: 0px 0px 0px 26px;
+    width: 45%;
+    display: inline-block;
+  }
+
+  .div2 {
+    width: 45%;
+    display: inline-block;
+  }
+  .div3 {
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+  }
 }
 
-.background-image .container {
-  padding: 0px 100px 0px 100px;
-}
-
-.div1 {
-  width: 45%;
-  display: inline-block;
-}
-
-.div2 {
-  width: 45%;
-  display: inline-block;
-}
-
-.div3 {
-  padding: 0px 150px 0px 300px;
-  text-align: end;
+.background-image-stores .container {
+  padding: 0px 300px 0px 300px;
 }
 
 
@@ -64,6 +63,7 @@
 
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: white;
+
   }
 
   ::-ms-input-placeholder { /* Microsoft Edge */
@@ -89,19 +89,19 @@ font-weight: var(--medium);
   width: 260px;
 }
 
-.background-image .buy-btn{
+.background-image-stores .buy-btn{
   background-color: var(--background-color-btn);
   text-decoration: none;
   color:var(--white);
   padding: 10px 60px;
-  margin: 0px 16px;
+  margin: 20px 16px;
   border-radius: 4px;
   border: 1px solid var(--blue);
   font-size: var(--title-paragraph-card);
   transition: all .5s;
 }
 
-.background-image .buy-btn:hover{
+.background-image-stores .buy-btn:hover{
   background-color: var(--background-color-btn-hover);
   color: var(--white);
   border: 1px solid var(--background-color-btn-hover);
