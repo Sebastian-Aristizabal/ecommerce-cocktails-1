@@ -1,8 +1,3 @@
-<%# <div data-controller="verificador" data-price-target="input">
-  <input type="text" data-action="keyup->verificador#formatNumber">
-  <button data-action="keyup->verificador#formatNumber">Format Currency</button>
-</div> %>
-
 <div class="background-image">
   <div class="container" data-controller="verificador">
   <h3>Present your new artwork from you to the <span>world</span></h3>
@@ -12,7 +7,7 @@
           <%= f.input :name, placeholder: 'Enter cocktail name', class: "form-control", label: false%>
         </div>
         <div class="form-group">
-          <%= f.input :price, placeholder: 'Enter price', data: { target: "input" }, class: "form-control", label: false %>
+          <%= f.input :price, placeholder: 'Enter price', data: { target: "verificador.input" }, class: "form-control", label: false %>
         </div>
         <div class="form-group">
           <%= f.input :discount, placeholder: 'Enter discount percentage', class: "form-control", label: false %>

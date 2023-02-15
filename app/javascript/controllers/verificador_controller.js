@@ -3,11 +3,11 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
 
   connect() {
-    console.log("no quiere funcionar");
+    console.log("this is not working");
   }
 
 
-  static targets = [ "input" ]
+  static targets = [ "input" ];
 
   formatNumber(event) {
   // skip for arrow keys
