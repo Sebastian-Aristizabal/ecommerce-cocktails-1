@@ -6,3 +6,4 @@ import { application } from "./application"
 
 import VerificadorController from "./verificador_controller"
 application.register("verificador", VerificadorController)
+
