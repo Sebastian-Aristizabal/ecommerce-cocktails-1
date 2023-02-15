@@ -6,41 +6,41 @@
 <div class="background-image">
   <div class="container" data-controller="verificador">
   <h3>Present your new artwork from you to the <span>world</span></h3>
-      <%=  simple_form_for @cocktail, url: store_cocktails_path(store_id: @store), data: { action: "keyup->verificador#formatNumber" }, method: :post do |f| %>
-        <div class="div1">
-          <div class="form-group">
-            <%= f.input :name, placeholder: 'Enter cocktail name', class: "form-control", label: false%>
-          </div>
-          <div class="form-group">
-            <%= f.input :price, placeholder: 'Enter price', data: { target: "input" }, class: "form-control", label: false %>
-          </div>
-          <div class="form-group">
-            <%= f.input :discount, placeholder: 'Enter discount percentage', class: "form-control", label: false %>
-          </div>
-          <div class="form-group">
-            <%= f.input :ingredients, placeholder: 'Enter ingredients', class: "form-control", label: false %>
-          </div>
+    <%=  simple_form_for @cocktail, url: store_cocktails_path(store_id: @store), data: { action: "keyup->verificador#formatNumber" }, method: :post do |f| %>
+      <div class="div1">
+        <div class="form-group">
+          <%= f.input :name, placeholder: 'Enter cocktail name', class: "form-control", label: false%>
         </div>
+        <div class="form-group">
+          <%= f.input :price, placeholder: 'Enter price', data: { target: "input" }, class: "form-control", label: false %>
+        </div>
+        <div class="form-group">
+          <%= f.input :discount, placeholder: 'Enter discount percentage', class: "form-control", label: false %>
+        </div>
+        <div class="form-group">
+          <%= f.input :ingredients, placeholder: 'Enter ingredients', class: "form-control", label: false %>
+        </div>
+      </div>
 
-        <div class="div2">
-          <div class="form-group">
-            <%= f.input :ml, placeholder: 'Enter size in ml', class: "form-control", label: false %>
-          </div>
-          <div class="form-group">
-            <%= f.input :description, placeholder: 'Enter description', class: "form-control", label: false %>
-          </div>
-          <div class="form-group">
-            <%= f.label "Select what kind of cocktail it is:"%> <br>
-            <%= f.collection_select :category_id, Category.order(:name), :id, :name  %>
-          </div>
-          <br>
-          <div class="form-group">
-            <%= f.input :photo, as: :file, label: 'Attach an image of your product' %>
-          </div>
+      <div class="div2">
+        <div class="form-group">
+          <%= f.input :ml, placeholder: 'Enter size in ml', class: "form-control", label: false %>
         </div>
-        <div class="div3">
-            <%= f.submit "submit", class: "buy-btn" %>
+        <div class="form-group">
+          <%= f.input :description, placeholder: 'Enter description', class: "form-control", label: false %>
         </div>
-      <% end %>
+        <div class="form-group">
+          <%= f.label "Select what kind of cocktail it is:"%> <br>
+          <%= f.collection_select :category_id, Category.order(:name), :id, :name  %>
+        </div>
+        <br>
+        <div class="form-group">
+          <%= f.input :photo, as: :file, label: 'Attach an image of your product' %>
+        </div>
+      </div>
+      <div class="div3">
+          <%= f.submit "submit", class: "buy-btn" %>
+      </div>
+    <% end %>
   </div>
 </div>

@@ -1,24 +1,60 @@
-<h1>Every Cocktail</h1>
-<% @cocktails.each do |cocktail| %>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title"><%= cocktail.name %></h5>
-      <p class="card-text"><%= cocktail.description %></p>
-      <p class="card-text"><%= cocktail.ingredients %></p>
-      <p class="card-text">Store: <%= cocktail.store.name %></p>
-      <p><%= link_to "Details",  cocktail_path(cocktail.id), class: "btn btn-primary" %></p>
+<h3 class="text-center">List of Products</h3>
+<div class="container-cocktail-index">
+  <div class="user-bar">
 
-          <% if user_signed_in? %>
-            <% if current_user.id == cocktail.store.user_id %>
-              <%= link_to cocktail,  method: :delete, data: { turbo_method: :delete} do %>
-                <i class="fa-regular fa-trash-can"></i>
-              <% end %>
-
-              <%= link_to edit_cocktail_path(cocktail.id) do %>
-                <i class="fa-solid fa-pen-to-square color-icon.header"></i>
-              <% end %>
-            <% end %>
-          <% end %>
-    </div>
   </div>
-<% end %>
+  <table class="cocktail-product-table">
+      <tr>
+        <th class="th-cocktail">Cocktail</th>
+        <th class="th-store">Store</th>
+        <th class="th-price">Price($)</th>
+        <th class="th-discount">Discount(%)</th>
+        <th class="th-price">Size(ml)</th>
+        <th class="th-price">Status</th>
+        <th class="th-ingredient">Ingredients</th>
+      </tr>
+    <% @cocktails.each do |cocktail| %>
+      <tr>
+        <td>
+          <div class="td-container">
+            <div class="td-img">
+              <%= link_to cocktail_path(cocktail) do %>
+                <%=image_tag(cocktail.photo, class:"product-circle-img")%>
+              <% end %>
+            </div>
+            <div class="td-cocktail-options">
+              <div>
+                <%= cocktail.name %>
+              </div>
+              <div>
+                <% if user_signed_in? %>
+                  <% if current_user.id == cocktail.store.user_id %>
+                    <%= link_to cocktail,  method: :delete, data: { turbo_method: :delete} do %>
+                      <i class="fa-regular fa-trash-can"></i>
+                    <% end %>
+
+                    <%= link_to edit_cocktail_path(cocktail.id) do %>
+                      <i class="fa-solid fa-pen-to-square color-icon.header"></i>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td><%= cocktail.store.name %></td>
+        <td><%= number_to_currency(cocktail.price) %></td>
+        <td><%= cocktail.discount %></td>
+        <td><%= cocktail.ml %></td>
+        <td>
+          <% if cocktail.status %>
+            <span class="in-stock">In Stock</span>
+          <% else %>
+            <span class="sold-out">Sold Out</span>
+          <% end %>
+        </td>
+        <td><%= cocktail.ingredients %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
